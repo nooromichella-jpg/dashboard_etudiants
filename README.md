@@ -76,4 +76,4 @@ CRUD complet : Ajout, modification et suppression des dossiers étudiants.
 
 Filtres avancés : Recherche par nom/matricule, centre d'examen et tranches de notes.
 
-Visualisation : Graphique de répartition des mentions (Très Bien, Bien, Assez Bien, Passable, Ajourné).
+Visualisation : Graphique de répartition des mentions (Très Bien, Bien, Assez Bien, Passable, Ajourné)."# dashboard_etudiants"  
