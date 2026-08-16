@@ -46,7 +46,7 @@ erDiagram
 graph LR
     subgraph Client_Frontend
         App[Dashboard Étudiant]
-    end
+    
 
     subgraph Server_API
         GET[/GET /api/etudiants/]
@@ -55,19 +55,13 @@ graph LR
         DELETE[/DELETE /api/etudiants/:id/]
     end
 
-    subgraph Database
-        MySQL[(MySQL Table: etudiants)]
-    end
 
     App -->|Récupérer la liste| GET
     App -->|Ajouter un étudiant| POST
     App -->|Modifier un profil| PUT
     App -->|Supprimer un étudiant| DELETE
 
-    GET --> MySQL
-    POST --> MySQL
-    PUT --> MySQL
-    DELETE --> MySQL
+
 
 3 -  Fonctionnalités du Dashboard Étudiant
 KPIs : Suivi du total des étudiants, moyenne générale et taux de réussite.
