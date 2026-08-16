@@ -1,26 +1,40 @@
-# Système de Gestion d'Établissement (DTS)
+# Système de Gestion des Étudiants 
 
-Application web de gestion administrative développée pour le suivi des étudiants.
+Application web de gestion administrative dédiée au suivi, à la notation et à l'analyse des résultats des étudiants.
 
-## 1. Modèle de Données (Graphe de Données)
+## 1. Modèle de Données (Entité Étudiant)
 ```mermaid
 erDiagram
-    USER ||--o{ ETUDIANT : "gère"
-    USER ||--o{ PROFESSEUR : "gère"
-    USER ||--o{ SEMESTRE : "gère"
-
-    USER {
-        int id PK
-        string nom
-        string email
-        string password
-    }
-
     ETUDIANT {
         int id PK
         string numero
         string nom
         string centre
         float note
-        int id_user FK
+        string mention
     }
+2 - Les Relations des API
+graph LR
+    subgraph Client_Frontend
+        App[Dashboard Étudiant]
+    end
+
+    subgraph Server_API
+        GET[/GET /api/etudiants/]
+        POST[/POST /api/etudiants/]
+        PUT[/PUT /api/etudiants/:id/]
+        DELETE[/DELETE /api/etudiants/:id/]
+    end
+
+    App -->|Récupérer la liste| GET
+3 -  Fonctionnalités Principales
+Gestion des dossiers : Ajout, modification et suppression des étudiants (CRUD).
+
+Suivi des résultats : Enregistrement des notes et calcul automatique des mentions.
+
+Recherche et Filtrage : Recherche par nom, matricule ou centre d'examen.
+
+Tableau de bord : Visualisation des statistiques de réussite et répartition des menti
+    App -->|Ajouter un étudiant| POST
+    App -->|Modifier un profil| PUT
+    App -->|Supprimer un étudiant| DELETE
