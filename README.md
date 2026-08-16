@@ -1,4 +1,4 @@
-# Système de Gestion des Étudiants 
+# Système de Gestion des Étudiants
 
 Application web de gestion administrative dédiée au suivi, à la notation et à l'analyse des résultats des étudiants.
 
@@ -13,19 +13,3 @@ erDiagram
         float note
         string mention
     }
-graph LR
-    subgraph Client_Frontend
-        App[Dashboard Étudiant]
-    end
-
-    subgraph Server_API
-        GET[/GET /api/etudiants/]
-        POST[/POST /api/etudiants/]
-        PUT[/PUT /api/etudiants/:id/]
-        DELETE[/DELETE /api/etudiants/:id/]
-    end
-
-    App -->|Récupérer la liste| GET
-    App -->|Ajouter un étudiant| POST
-    App -->|Modifier un profil| PUT
-    App -->|Supprimer un étudiant| DELETE
