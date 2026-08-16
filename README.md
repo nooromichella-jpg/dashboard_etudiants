@@ -1,4 +1,4 @@
-# Système de Gestion d'Établissement (DTS)
+# Système de Gestion d'Établissement
 
 Application web de gestion administrative développée pour le suivi des étudiants.
 
@@ -30,7 +30,7 @@ erDiagram
 graph LR
     subgraph Client_Frontend
         App[Dashboard Étudiant]
-    end
+    
 
     subgraph Server_API
         GET[/GET /api/etudiants/]
