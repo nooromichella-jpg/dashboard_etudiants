@@ -26,22 +26,6 @@ erDiagram
         int id_user FK
     }
 
-    PROFESSEUR {
-        int id PK
-        string nom
-        string matiere
-        string statut
-        int id_user FK
-    }
-
-    SEMESTRE {
-        int id PK
-        string code
-        string annee
-        string statut
-        int id_user FK
-    }
-
 2 - Relations des API 
 graph LR
     subgraph Client_Frontend
@@ -55,19 +39,12 @@ graph LR
         DELETE[/DELETE /api/etudiants/:id/]
     end
 
-    subgraph Database
-        MySQL[(MySQL Table: etudiants)]
-    end
-
     App -->|Récupérer la liste| GET
     App -->|Ajouter un étudiant| POST
     App -->|Modifier un profil| PUT
     App -->|Supprimer un étudiant| DELETE
 
-    GET --> MySQL
-    POST --> MySQL
-    PUT --> MySQL
-    DELETE --> MySQL
+
 
 3 -  Fonctionnalités du Dashboard Étudiant
 KPIs : Suivi du total des étudiants, moyenne générale et taux de réussite.
