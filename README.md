@@ -1,52 +1,23 @@
-# Système de Gestion d'Établissement (DTS)
+# Système de Gestion des Étudiants (DTS)
 
-Application web de gestion administrative développée pour le suivi des étudiants.
+Application web de gestion administrative dédiée au suivi, à la notation et à l'analyse des résultats des étudiants.
 
-
-## 1. Modèle de Données (Graphe de Données)
+## 1. Modèle de Données (Entité Étudiant)
 ```mermaid
 erDiagram
-    USER ||--o{ ETUDIANT : "gère"
-    USER ||--o{ PROFESSEUR : "gère"
-    USER ||--o{ SEMESTRE : "gère"
-
-    USER {
-        int id PK
-        string nom
-        string email
-        string password
-    }
-
     ETUDIANT {
         int id PK
         string numero
         string nom
         string centre
         float note
-        int id_user FK
+        string mention
     }
-
-    PROFESSEUR {
-        int id PK
-        string nom
-        string matiere
-        string statut
-        int id_user FK
-    }
-
-    SEMESTRE {
-        int id PK
-        string code
-        string annee
-        string statut
-        int id_user FK
-    }
-
-2 - Relations des API 
+2 - Relation des API 
 graph LR
     subgraph Client_Frontend
-        App[Dashboard Étudiant]
-    
+        App[Dashboard Étudiant]  <!-- CORRIGÉ : Le mot 'end' a été retiré ici -->
+    end                         <!-- CORRIGÉ : Fermeture normale du sous-graphe -->
 
     subgraph Server_API
         GET[/GET /api/etudiants/]
@@ -55,19 +26,16 @@ graph LR
         DELETE[/DELETE /api/etudiants/:id/]
     end
 
-
     App -->|Récupérer la liste| GET
     App -->|Ajouter un étudiant| POST
     App -->|Modifier un profil| PUT
     App -->|Supprimer un étudiant| DELETE
 
+3. Fonctionnalités Principales
+Gestion des dossiers : Ajout, modification et suppression des étudiants (CRUD).
 
+Suivi des résultats : Enregistrement des notes et calcul automatique des mentions.
 
-3 -  Fonctionnalités du Dashboard Étudiant
-KPIs : Suivi du total des étudiants, moyenne générale et taux de réussite.
+Recherche et Filtrage : Recherche par nom, matricule ou centre d'examen.
 
-CRUD complet : Ajout, modification et suppression des dossiers étudiants.
-
-Filtres avancés : Recherche par nom/matricule, centre d'examen et tranches de notes.
-
-Visualisation : Graphique de répartition des mentions (Très Bien, Bien, Assez Bien, Passable, Ajourné)."# dashboard_etudiants"  
+Tableau de bord : Visualisation des statistiques de réussite et répartition des mentions.
