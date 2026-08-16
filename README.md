@@ -13,28 +13,3 @@ erDiagram
         float note
         string mention
     }
-2 - Les Relations des API
-graph LR
-    subgraph Client_Frontend
-        App[Dashboard Étudiant]
-    end
-
-    subgraph Server_API
-        GET[/GET /api/etudiants/]
-        POST[/POST /api/etudiants/]
-        PUT[/PUT /api/etudiants/:id/]
-        DELETE[/DELETE /api/etudiants/:id/]
-    end
-
-    App -->|Récupérer la liste| GET
-3 -  Fonctionnalités Principales
-Gestion des dossiers : Ajout, modification et suppression des étudiants (CRUD).
-
-Suivi des résultats : Enregistrement des notes et calcul automatique des mentions.
-
-Recherche et Filtrage : Recherche par nom, matricule ou centre d'examen.
-
-Tableau de bord : Visualisation des statistiques de réussite et répartition des menti
-    App -->|Ajouter un étudiant| POST
-    App -->|Modifier un profil| PUT
-    App -->|Supprimer un étudiant| DELETE
