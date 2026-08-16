@@ -37,7 +37,7 @@ graph LR
         POST[/POST /api/etudiants/]
         PUT[/PUT /api/etudiants/:id/]
         DELETE[/DELETE /api/etudiants/:id/]
-    end
+
 
     App -->|Récupérer la liste| GET
     App -->|Ajouter un étudiant| POST
