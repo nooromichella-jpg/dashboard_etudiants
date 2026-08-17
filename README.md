@@ -14,3 +14,20 @@ erDiagram
         float note
         string mention
     }
+
+graph LR
+    subgraph Client [Frontend]
+        App[Dashboard Étudiant]
+    end
+
+    subgraph Serveur [API Backend]
+        GET[GET /api/etudiants/]
+        POST[POST /api/etudiants/]
+        PUT[PUT /api/etudiants/:id/]
+        DELETE[DELETE /api/etudiants/:id/]
+    end
+
+    App -->|Récupérer la liste| GET
+    App -->|Ajouter un étudiant| POST
+    App -->|Modifier un profil| PUT
+    App -->|Supprimer un étudiant| DELETE
