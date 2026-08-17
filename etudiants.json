@@ -1,0 +1,79 @@
+[
+  {
+    "id": 2,
+    "numero": "ETU002",
+    "nom": "RASOA Marie",
+    "centre": "Ankatso",
+    "note": 16
+  },
+  {
+    "id": 3,
+    "numero": "ETU003",
+    "nom": "RAKOTO Paul",
+    "centre": "Antohamadinika",
+    "note": 8.5
+  },
+  {
+    "id": 4,
+    "numero": "ETU004",
+    "nom": "ANDRY Luc",
+    "centre": "Sabotsy Namehana",
+    "note": 12
+  },
+  {
+    "id": 5,
+    "numero": "ETU005",
+    "nom": "HERY Sarah",
+    "centre": "Ankatso",
+    "note": 11
+  },
+  {
+    "id": 1786538709360,
+    "numero": "ETU006",
+    "nom": "ELY Jean",
+    "centre": "Ankatso",
+    "note": 10
+  },
+  {
+    "id": 1786540866535,
+    "numero": "ETU007",
+    "nom": "ATHIMA Fai ",
+    "centre": "Andakana",
+    "note": 12
+  },
+  {
+    "id": 1786540906954,
+    "numero": "ETU008",
+    "nom": "ATTITYA Kaphrao",
+    "centre": "Ankatso",
+    "note": 15
+  },
+  {
+    "id": 1786541601198,
+    "numero": "ETU001",
+    "nom": "WAYO Lom",
+    "centre": "Antohomadinika",
+    "note": 13
+  },
+  {
+    "id": 1786541673395,
+    "numero": "ETU009",
+    "nom": "APO Watinwanich",
+    "centre": "Itaosy",
+    "note": 11
+  },
+  {
+    "id": 1786541725296,
+    "numero": "ETU 009",
+    "nom": "DIN Kasama",
+    "centre": "Sabotsy",
+    "note": 9
+  },
+  {
+    "id": 1786613924185,
+    "numero": "ETU00101",
+    "nom": "SOLO",
+    "centre": "Ivato",
+    "note": 14
+  }
+]

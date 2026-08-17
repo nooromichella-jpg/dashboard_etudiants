@@ -13,6 +13,7 @@ erDiagram
         float note
         string mention
     }
+<<<<<<< HEAD
 2 - Relation des API 
 graph LR
     subgraph Client_Frontend
@@ -39,3 +40,5 @@ Suivi des résultats : Enregistrement des notes et calcul automatique des mentio
 Recherche et Filtrage : Recherche par nom, matricule ou centre d'examen.
 
 Tableau de bord : Visualisation des statistiques de réussite et répartition des mentions.
+=======
+>>>>>>> 2c6b33cd6cfbeca4f9eff63bbb71cc1ca29c7e77
